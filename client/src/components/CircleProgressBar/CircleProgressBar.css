@@ -1,0 +1,39 @@
+.circle-progress-bar {
+    position: relative;
+
+    width: fit-content;
+    height: fit-content;
+}
+
+.circle-progress-bar svg {
+    display: block;
+
+    rotate: -90deg;
+    /* width: fit-content;
+    height: fit-content; */
+
+}
+
+.circle-progress-bar svg circle:nth-of-type(1) {
+    fill: none;
+    stroke: #252525;
+    stroke-width: 0.1875rem;
+}
+
+.circle-progress-bar svg circle:nth-of-type(2) {
+    fill: none;
+    stroke: #5BDEE3;
+    stroke-width: 0.1875rem;
+    /* stroke-linecap: round; */
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.circle-progress-bar label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1rem;
+    font-weight: 600;
+}

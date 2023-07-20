@@ -1,0 +1,49 @@
+#game-page {
+    display: grid;
+    grid-template-columns: 1fr 46.875rem;
+
+    width: 100%;
+    height: 100vh;
+
+    transition: all .2s;
+    /* transition-delay: .2s; */
+}
+
+#game-page.in-game {
+    grid-template-columns: 1fr 0rem;
+}
+
+#game-page.in-game #connect-component {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#game-page:not(.in-game) #play-page {
+    grid-template-columns: 1fr;
+    transition-delay: .4s;
+}
+
+
+#game-page:not(.in-game) #play-page .board {
+    width: auto;
+    height: auto;
+    
+    max-width: 100%;
+    max-height: calc(100vh - 7.5rem);
+}
+
+/* #game-page.in-game #play-page {
+    grid-template-columns: 1fr;
+
+    animation: delayed-change .2s ease-in-out forwards;
+    animation-delay: .1s;
+} */
+
+/* @keyframes delayed-change {
+    0% {
+      grid-template-columns: 1fr;
+    }
+    100% {
+        grid-template-columns: 6.25rem 1fr min-content 5.625rem 1fr 4.375rem;
+    }
+} */

@@ -1,0 +1,28 @@
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #101010;
+    border: .125rem solid #252525;
+    border-radius: .3125rem;
+
+    transition: all .1s;
+}
+
+.timer label {
+    font-size: .9375rem;
+
+    transition: all .1s;
+}
+
+
+.timer.active {
+    border-color: #5BDEE3;
+}
+.timer.active label {
+    color: #5BDEE3;
+}

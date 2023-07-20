@@ -1,0 +1,19 @@
+#jwc-container {
+    display: flex;
+    gap: 1.25rem;
+
+    width: 100%;
+    height: 3.125rem;
+
+    margin-bottom: 1.25rem;
+}
+
+#jwc-container input {
+    font-size: 1rem;
+    padding-left: 1.5625rem;
+}
+#jwc-container button {
+    width: fit-content;
+
+    padding: 0rem 1.5625rem;
+}

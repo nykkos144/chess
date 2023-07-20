@@ -1,0 +1,7 @@
+#connect-component {
+    display: grid;
+    grid-template-columns: 22.5rem 24.375rem;
+    /* grid-template-areas: 'board control-panel user-panel'; */
+
+    transition: all .2s;
+}

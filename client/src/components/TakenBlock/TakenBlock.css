@@ -1,0 +1,39 @@
+.taken-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: fit-content;
+
+    background-color: #101010;
+    border: .125rem solid #252525;
+
+    border-radius: .3125rem;
+
+    padding: 1.25rem 1.5625rem;
+}
+.taken-container div {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: .625rem;
+}
+.taken-container div:last-of-type {
+    margin-bottom: 0px;
+}
+.taken-container div img {
+    height: 1rem;
+}
+.taken-container div label {
+    display: block;
+    font-size: 1rem;
+}
+.taken-container div label:nth-of-type(1) {
+    color: #505050;
+
+    margin: 0px .625rem;
+}
+.taken-container div label:nth-of-type(2) {
+
+}

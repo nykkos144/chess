@@ -1,0 +1,303 @@
+:root {
+    --white-filter: brightness(0) saturate(100%) invert(93%) sepia(7%) saturate(30%) hue-rotate(278deg) brightness(107%) contrast(106%);
+    --black-filter: brightness(0) saturate(100%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: Futura;
+    font-weight: 500;
+
+    color: white;
+
+    cursor: default;
+    user-select: none;
+
+    white-space: nowrap;
+}
+*::-webkit-scrollbar {
+    width: 0.625rem;
+}
+*::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #202020;
+}
+
+
+html,
+body {
+    margin: 0rem;
+    padding: 0rem;
+    max-width: 100vw;
+    scroll-behavior: smooth;
+
+    background-color: #000000;
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+button * {
+    pointer-events: none;
+}
+
+  
+input {
+    cursor: text;
+    outline: none;
+    user-select: auto !important;
+}
+
+  
+  
+@font-face {
+    font-family: Futura;
+    src: url(./assets/fonts/FuturaPT-Bold.woff2);
+    font-weight: 700;
+}
+@font-face {
+    font-family: Futura;
+    src: url(./assets/fonts/FuturaPT-Heavy.woff2);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Futura;
+    src: url(./assets/fonts/FuturaPT-Demi.woff2);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Futura;
+    src: url(./assets/fonts/FuturaPT-Medium.woff2);
+    font-weight: 450;
+}
+@font-face {
+    font-family: Futura;
+    src: url(./assets/fonts/FuturaPT-Book.woff2);
+    font-weight: 400;
+}
+  
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.panel {
+    width: 100%;
+    height: 100vh;
+
+    overflow-y: auto;
+}
+.panel::-webkit-scrollbar {
+    display: none;
+}
+
+
+button.option {
+    width: 100%;
+    height: 100%;
+
+    color: #707070;
+    /* color: white; */
+    /* font-size: 0.9375rem; */
+
+    /* background-color: #101010; */
+    background-color: #101010;
+    border: 0.125rem solid #252525;
+    border-radius: 0.3125rem;
+
+    transition: all .1s;
+}
+button.option:not(.active):hover {
+    /* color: #808080; */
+    background-color: #181818;
+    /* background-color: #202020; */
+    border-color: #404040;
+}
+button.option.active {
+    border-color: white;
+    background-color: white;
+    color: black;
+}
+
+
+button.submit {
+    cursor: not-allowed;
+
+    width: 100%;
+    /* height: 3.125rem; */
+
+    color: #505050;
+
+    background-color: #181818;
+    border: 0.125rem solid #181818;
+    border-radius: 0.3125rem;
+
+    transition: all .1s;
+}
+button.submit.main {
+    height: 3.125rem;
+    font-size: 0.9375rem;
+}
+button.submit.active {
+    cursor: pointer;
+    color: black;
+    background-color: #5BDEE3;
+    border-color: #5BDEE3;
+}
+button.submit.active:hover {
+    color: #5BDEE3;
+    background-color: transparent;
+    border-color: #5BDEE3;
+}
+button.submit.main.clicked {
+    background-color: transparent;
+    border-color: #5BDEE3;
+    color: #5BDEE3;
+}
+
+
+button.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 0.3125rem;
+
+    transition: all .1s;
+}
+button.icon img {
+    width: auto;
+    height: 1.25rem;
+}
+button.icon:hover {
+    background-color: #181818;
+}
+
+
+hr {
+    width: 100%;
+
+    border: none;
+    border-top: 0.0625rem solid #202020;
+
+    margin: 1.875rem 0rem;
+}
+hr.no-margin {
+    margin: 0;
+}
+hr.small {
+    width: calc(100% - 3.75rem);
+    margin: 0px auto;
+}
+
+
+input.main {
+    width: 100%;
+    height: 100%;
+
+    font-size: 0.875rem;
+    font-weight: 400;
+
+    background-color: #151515;
+    /* background-color: transparent; */
+    border: 0.125rem solid #303030;
+    border-radius: 0.3125rem;
+
+    padding: 0rem 1.25rem;
+    /* padding-left: 1.25rem;
+    padding-right: 0.625rem; */
+
+    transition: all .1s;
+}
+input.main::placeholder {
+    color: #606060;
+}
+input.main:hover {
+    border-color: #404040;
+}
+input.main:focus {
+    background-color: transparent;
+    border-color: #404040;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.profile-pic {
+    aspect-ratio: 1 / 1;
+
+    /* width: auto;
+    height: 100%; */
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    background-color: #151515;
+    border: 0.125rem solid #252525;
+    border-radius: 50%;
+}
+.profile-pic.active {
+    border-color: #5BDEE3;
+}
+
+
+.spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border: 0.1875rem solid #252525;
+    border-top: 0.1875rem solid #5BDEE3;
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+    margin: 0rem;
+}
+@keyframes spin {
+    0% { rotate: 0deg; }
+    100% { rotate: 360deg; }
+}
+
